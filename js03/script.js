@@ -12,4 +12,10 @@ console.log(test);
 test = "문자열";
 console.log(test);
 
+test = "변수의 활용"
+console.log(test);
+console.log(test);
+console.log(test);
+console.log(test);
+
 
