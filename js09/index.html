@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습 09 - document & methods</title>
+</head>
+
+<style>
+
+</style>
+
+<body>
+    <h1>h1 제목</h1>
+    <p>p 문단</p>
+    <p id="text">아이디 문단</p>
+    <p class="desc">클래스 문단</p>
+
+    <pre>
+document & methods
+
+window.document는 현재 브라우저에 렌더링 되고 있는 문서를 의미
+
+window.document는 페이지 콘텐츠인 DOM에 대한 진입점 역할을 하는
+프로그래밍 인터페이스다. 
+
+document.querySelector & document.getElementById
+- 요소를 선택하기 위해 사용할 수 있는 대표적인 메소드
+  두 메소드는 모두 요소(Element) 객체를 반환
+
+- document.querySelector
+querySelector 메소드는 선택자를 인자로 전달받아, 전달받은 선택자와 일치하는
+문서 내 첫 번째 요소를 반환, 일치하는 요소가 없으면 null(없다.)데이터 반환
+
+예)
+// p태그 선택
+document.querySelector("p");
+
+// id가 text인 요소 선택
+document.querySelector("#text");
+
+// class가 text인 요소 선택
+document.querySelector(".text");
+
+
+- document.getElementById
+getElementById 메소드는 id를 인자로 전달받아, 전달받은 선택자와 일치하는
+문서 내 요소를 반환, 일치하는 요소가 없으면 null(없다.)데이터 반환
+인자로 전달되는 선택자는 문자열 타입의 'id'를 의미
+
+예)
+// id가 text인 요소 선택
+document.getElementById('text');
+
+// id가 image인 요소 선택
+document.getElementById('image');
+
+
+- textContent
+해당 노드가 포함하고 있는 텍스트 콘텐츠를 표현하는 속성
+textContent로 요소가 포함한 텍스트를 읽을수도, 변경할 수도 있다. 
+
+예)
+// p요소를 반환받아 상수로 이름을 붙인다. 
+const p = document.querySelector('p');
+// p요소의 textContent 속성을 console로 출력한다.
+console.log(p.textContent)
+
+// p요소의 textContent 속성 값을 변경한다. 
+p.textContent = '텍스트를 이걸로 바꾼다.'
+    </pre>
+    <script src="script.js"></script>
+</body>
+</html>
